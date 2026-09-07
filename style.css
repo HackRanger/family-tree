@@ -503,6 +503,101 @@ figcaption {
   border-block: 1px solid var(--line);
 }
 
+.temple-section {
+  padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 5rem);
+  background: #fffdf8;
+  border-top: 1px solid var(--line);
+}
+
+.temple-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.76fr) minmax(0, 1.24fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.temple-copy {
+  position: sticky;
+  top: 1rem;
+}
+
+.temple-copy p,
+.contact-panel dd,
+.contact-panel dt {
+  color: #3a483f;
+  line-height: 1.65;
+}
+
+.contact-panel {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: #f7f3ec;
+}
+
+.contact-panel h3 {
+  margin-bottom: 0.8rem;
+}
+
+.contact-panel dl {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.contact-panel div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(28, 49, 88, 0.12);
+}
+
+.contact-panel div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.contact-panel dt {
+  font-weight: 800;
+}
+
+.contact-panel dd {
+  margin: 0;
+}
+
+.contact-panel a {
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.temple-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.temple-gallery figure {
+  margin: 0;
+  border: 1px solid var(--line);
+  background: #f7f3ec;
+}
+
+.temple-gallery figure.wide {
+  grid-column: 1 / -1;
+}
+
+.temple-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.temple-gallery .wide img {
+  aspect-ratio: 16 / 9;
+}
+
 .archive {
   background: #ece4d6;
 }
@@ -548,7 +643,8 @@ figcaption {
 @media (max-width: 1100px) {
   .hero,
   .tree-layout,
-  .feature-band {
+  .feature-band,
+  .temple-layout {
     grid-template-columns: 1fr;
   }
 
@@ -557,6 +653,10 @@ figcaption {
   }
 
   .person-panel {
+    position: static;
+  }
+
+  .temple-copy {
     position: static;
   }
 
@@ -572,6 +672,7 @@ figcaption {
   .history,
   .archive,
   .sources,
+  .temple-section,
   .culture-grid,
   .feature-band {
     padding: 2.25rem 1rem;
@@ -601,7 +702,14 @@ figcaption {
 
   .chapters,
   .culture-grid,
-  .scan-grid {
+  .scan-grid,
+  .temple-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .contact-panel div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.1rem;
   }
 }
