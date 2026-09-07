@@ -1,11 +1,11 @@
 :root {
-  --background: #fffafa;
+  --background: #ffffff;
   --foreground: #17201b;
   --ink: #1c3158;
   --leaf: #2d6a4f;
   --saffron: #b85f2e;
   --rose: #8f3d4b;
-  --paper: #fffafa;
+  --paper: #ffffff;
   --line: #d4c4a8;
   --muted: #657169;
   --shadow: 0 24px 70px rgba(40, 45, 38, 0.14);
@@ -39,7 +39,7 @@ main {
 
 .site-navbar {
   border-bottom: 1px solid rgba(212, 196, 168, 0.72);
-  background: rgba(255, 250, 250, 0.96);
+  background: rgba(255, 255, 255, 0.96);
   box-shadow: 0 10px 28px rgba(40, 45, 38, 0.08);
   backdrop-filter: blur(10px);
 }
@@ -177,7 +177,7 @@ h3 {
   min-height: 44px;
   padding: 0.8rem 1rem;
   border: 1px solid rgba(28, 49, 88, 0.24);
-  background: rgba(255, 250, 241, 0.78);
+  background: rgba(255, 255, 255, 0.78);
   color: var(--ink);
   font-weight: 800;
   text-decoration: none;
@@ -185,7 +185,7 @@ h3 {
 
 .hero-actions a:first-child {
   background: var(--ink);
-  color: #fffaf1;
+  color: #ffffff;
 }
 
 .scan-frame {
@@ -218,13 +218,13 @@ figcaption {
   padding: 1rem clamp(1rem, 4vw, 5rem);
   overflow-x: auto;
   background: #17331f;
-  color: #fffaf1;
+  color: #ffffff;
 }
 
 .context-strip span {
   flex: 0 0 auto;
   padding: 0.6rem 0.8rem;
-  border: 1px solid rgba(255, 250, 241, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   font-size: 0.92rem;
   font-weight: 700;
 }
@@ -272,7 +272,7 @@ figcaption {
   min-height: 48px;
   border: 1px solid rgba(28, 49, 88, 0.24);
   border-radius: 0;
-  background: #fffdf8;
+  background: #ffffff;
   color: var(--foreground);
   font: inherit;
   padding: 0.75rem 0.9rem;
@@ -288,7 +288,7 @@ figcaption {
   width: min(100%, 330px);
   padding: 0.7rem;
   border: 1px solid var(--line);
-  background: rgba(255, 250, 241, 0.7);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .zoom-controls,
@@ -303,7 +303,7 @@ figcaption {
   min-width: 40px;
   min-height: 38px;
   border: 1px solid rgba(28, 49, 88, 0.24);
-  background: #fffdf8;
+  background: #ffffff;
   color: var(--ink);
   cursor: pointer;
   font: inherit;
@@ -346,7 +346,7 @@ figcaption {
   display: grid;
   place-items: center;
   border: 1px solid var(--line);
-  background: rgba(255, 250, 241, 0.7);
+  background: rgba(255, 255, 255, 0.7);
   color: var(--ink);
   font-weight: 800;
 }
@@ -364,7 +364,7 @@ figcaption {
   padding: 1rem;
   border: 1px solid var(--line);
   background:
-    linear-gradient(rgba(255, 250, 241, 0.94), rgba(255, 250, 241, 0.94)),
+    linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94)),
     url("./assets/family-tree-scan-page-1.png") center / cover;
 }
 
@@ -397,7 +397,7 @@ figcaption {
   width: 100%;
   height: 100%;
   border: 1px solid rgba(28, 49, 88, 0.22);
-  background: rgba(255, 253, 248, 0.94);
+  background: rgba(255, 255, 255, 0.94);
   color: var(--ink);
   cursor: pointer;
   font: inherit;
@@ -430,13 +430,13 @@ figcaption {
 
 .graph-card.selected {
   border-color: var(--rose);
-  background: #fff0e8;
+  background: #ffffff;
   box-shadow: 0 0 0 3px rgba(143, 61, 75, 0.16);
 }
 
 .graph-card.match {
   border-color: var(--leaf);
-  background: #eef8ee;
+  background: #ffffff;
 }
 
 .person-panel {
@@ -444,7 +444,7 @@ figcaption {
   top: 1rem;
   padding: 1.2rem;
   border: 1px solid var(--line);
-  background: #fffdf8;
+  background: #ffffff;
   box-shadow: 0 14px 40px rgba(40, 45, 38, 0.08);
 }
 
@@ -493,7 +493,7 @@ figcaption {
 }
 
 .history {
-  background: #fffdf8;
+  background: #ffffff;
   border-block: 1px solid var(--line);
 }
 
@@ -507,7 +507,7 @@ figcaption {
 
 .chapters article,
 .culture-grid article {
-  background: #fffdf8;
+  background: #ffffff;
   padding: clamp(1rem, 2vw, 1.5rem);
 }
 
@@ -525,22 +525,22 @@ figcaption {
   gap: 2rem;
   align-items: center;
   background: #17331f;
-  color: #fffaf1;
+  color: #ffffff;
 }
 
 .feature-band h2,
 .feature-band .eyebrow {
-  color: #fffaf1;
+  color: #ffffff;
 }
 
 .feature-band p {
   max-width: 850px;
-  color: rgba(255, 250, 241, 0.82);
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .author-caption {
   margin-top: 1rem;
-  color: #fffaf1 !important;
+  color: #ffffff !important;
   font-weight: 900;
 }
 
@@ -552,7 +552,7 @@ figcaption {
 .lineage-card span {
   padding: 0.8rem 1rem;
   border-left: 4px solid #f0a35f;
-  background: rgba(255, 250, 241, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   font-weight: 900;
 }
 
@@ -567,13 +567,13 @@ figcaption {
 .gotra-section {
   padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 5rem);
   background: #17331f;
-  color: #fffaf1;
+  color: #ffffff;
 }
 
 .gotra-section h1,
 .gotra-section h2,
 .gotra-section h3 {
-  color: #fffaf1;
+  color: #ffffff;
 }
 
 .gotra-layout {
@@ -585,14 +585,14 @@ figcaption {
 
 .shloka-card,
 .translation-card {
-  border: 1px solid rgba(255, 250, 241, 0.2);
-  background: rgba(255, 250, 241, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
   padding: clamp(1rem, 2vw, 1.4rem);
 }
 
 .shloka-card p {
   margin: 0 0 1rem;
-  color: #fffaf1;
+  color: #ffffff;
   font-size: clamp(1.2rem, 2.3vw, 2rem);
   font-weight: 800;
   line-height: 1.7;
@@ -604,7 +604,7 @@ figcaption {
 
 .gotra-copy p,
 .translation-card p {
-  color: rgba(255, 250, 241, 0.84);
+  color: rgba(255, 255, 255, 0.84);
   line-height: 1.75;
 }
 
@@ -618,7 +618,7 @@ figcaption {
 
 .temple-section {
   padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 5rem);
-  background: #fffdf8;
+  background: #ffffff;
   border-top: 1px solid var(--line);
 }
 
@@ -645,7 +645,7 @@ figcaption {
   margin-top: 1.5rem;
   padding: 1rem;
   border: 1px solid var(--line);
-  background: #f7f3ec;
+  background: #ffffff;
 }
 
 .contact-panel h3 {
@@ -697,7 +697,7 @@ figcaption {
   align-items: center;
   border: 1px solid rgba(28, 49, 88, 0.24);
   background: var(--ink);
-  color: #fffaf1;
+  color: #ffffff;
   font-weight: 900;
   padding: 0.7rem 0.85rem;
   text-decoration: none;
@@ -712,7 +712,7 @@ figcaption {
 .temple-gallery figure {
   margin: 0;
   border: 1px solid var(--line);
-  background: #f7f3ec;
+  background: #ffffff;
 }
 
 .temple-gallery figure.wide {
@@ -731,7 +731,7 @@ figcaption {
 }
 
 .archive {
-  background: #ece4d6;
+  background: #ffffff;
 }
 
 .scan-grid {
@@ -766,11 +766,11 @@ figcaption {
 
 .sources {
   background: #17201b;
-  color: #fffaf1;
+  color: #ffffff;
 }
 
 .sources h2 {
-  color: #fffaf1;
+  color: #ffffff;
 }
 
 .sources ul {
@@ -780,7 +780,7 @@ figcaption {
 }
 
 .sources li {
-  color: rgba(255, 250, 241, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   margin: 0.7rem 0;
 }
 
@@ -816,7 +816,7 @@ figcaption {
 .source-grid article {
   min-height: 220px;
   padding: 1.2rem;
-  background: #fffdf8;
+  background: #ffffff;
 }
 
 .source-grid p {
@@ -831,7 +831,7 @@ figcaption {
   margin-top: 0.6rem;
   padding: 0.7rem 0.85rem;
   background: var(--ink);
-  color: #fffaf1;
+  color: #ffffff;
   font-weight: 900;
   text-decoration: none;
 }
@@ -845,7 +845,7 @@ figcaption {
 .source-image-grid figure {
   margin: 0;
   border: 1px solid var(--line);
-  background: #fffdf8;
+  background: #ffffff;
 }
 
 .source-image-grid img {
