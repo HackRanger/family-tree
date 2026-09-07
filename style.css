@@ -128,9 +128,9 @@ h1 {
   margin: 0;
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3rem, 9vw, 7.4rem);
+  font-size: clamp(2.4rem, 6.2vw, 5.2rem);
   font-weight: 700;
-  line-height: 0.92;
+  line-height: 1;
   letter-spacing: 0;
 }
 
@@ -873,7 +873,7 @@ figcaption {
   }
 
   h1 {
-    font-size: 3.1rem;
+    font-size: 2.45rem;
   }
 
   .tree-tools {
