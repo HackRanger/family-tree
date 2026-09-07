@@ -1,5 +1,5 @@
 :root {
-  --background: #f7f3ec;
+  --background: #fffafa;
   --foreground: #17201b;
   --ink: #1c3158;
   --leaf: #2d6a4f;
@@ -22,10 +22,7 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  background:
-    radial-gradient(circle at top left, rgba(45, 106, 79, 0.12), transparent 30rem),
-    linear-gradient(135deg, rgba(28, 49, 88, 0.08), transparent 28rem),
-    var(--background);
+  background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -50,16 +47,17 @@ main {
 }
 
 .site-navbar .navbar-brand {
-  color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.22rem;
-  font-weight: 900;
-  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 0;
 }
 
-.site-navbar .navbar-brand:hover,
-.site-navbar .navbar-brand:focus-visible {
-  color: var(--rose);
+.site-navbar .navbar-brand img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 
 .site-navbar .navbar-toggler {
