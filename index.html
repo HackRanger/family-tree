@@ -8,9 +8,37 @@
       name="description"
       content="An interactive family tree and documentary history connecting Mulvir temple, Kowad, Karada Brahmin culture and the Mysore branch."
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg site-navbar sticky-top" aria-label="Main navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Joshi Kovadkar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#tree">Family Tree</a></li>
+            <li class="nav-item"><a class="nav-link" href="#history">History</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gotra">Gotra</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pernem-temples">Pernem Temples</a></li>
+            <li class="nav-item"><a class="nav-link" href="#nittur-narasimha">Nittur Temple</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sources">Sources</a></li>
+            <li class="nav-item"><a class="nav-link" href="./sources.html">Source Files</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <main>
       <section class="hero">
         <div class="hero-copy">
@@ -19,12 +47,6 @@
           <p class="lede">
             From temple service in Pernem to Kowad, Belagavi, Bangalore, northern Karnataka and Mysore, this page gathers the scanned genealogy and oral history into one navigable archive.
           </p>
-          <div class="hero-actions" aria-label="Page sections">
-            <a href="#tree">Explore tree</a>
-            <a href="#history">Read history</a>
-            <a href="#sources">Sources</a>
-            <a href="./sources.html">Source files</a>
-          </div>
         </div>
         <figure class="scan-frame">
           <img src="./assets/family-tree-scan-page-1.png" alt="Original handwritten family tree scan" />
@@ -327,6 +349,7 @@
       </section>
     </main>
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script
       data-goatcounter="https://subbujoshi.goatcounter.com/count"
       async

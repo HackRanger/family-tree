@@ -8,9 +8,35 @@
       name="description"
       content="Source files, archived notes, maps, and image material for the Joshi Kovadkar family tree documentary."
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg site-navbar sticky-top" aria-label="Source navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Joshi Kovadkar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#sourceNavbar"
+          aria-controls="sourceNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="sourceNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="./index.html">Documentary</a></li>
+            <li class="nav-item"><a class="nav-link" href="./index.html#tree">Family Tree</a></li>
+            <li class="nav-item"><a class="nav-link" href="./index.html#history">History</a></li>
+            <li class="nav-item"><a class="nav-link" href="./index.html#gotra">Gotra</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./sources.html">Source Files</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <main>
       <section class="source-hero">
         <p class="eyebrow">Source archive</p>
@@ -18,11 +44,6 @@
         <p class="lede">
           This page gathers the source material used in the family tree documentary: original scans, temple images, oral-history notes, map links and archived web references.
         </p>
-        <div class="hero-actions" aria-label="Source page navigation">
-          <a href="./index.html">Back to documentary</a>
-          <a href="./index.html#tree">Family tree</a>
-          <a href="./index.html#sources">Source notes</a>
-        </div>
       </section>
 
       <section class="source-section">
@@ -150,6 +171,7 @@
         </ul>
       </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script
       data-goatcounter="https://subbujoshi.goatcounter.com/count"
       async

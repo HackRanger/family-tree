@@ -11,13 +11,6 @@
   --shadow: 0 24px 70px rgba(40, 45, 38, 0.14);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -43,6 +36,53 @@ a {
 
 main {
   overflow: hidden;
+}
+
+.site-navbar {
+  border-bottom: 1px solid rgba(212, 196, 168, 0.72);
+  background: rgba(255, 250, 241, 0.96);
+  box-shadow: 0 10px 28px rgba(40, 45, 38, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.site-navbar .container-fluid {
+  padding-inline: clamp(1rem, 4vw, 5rem);
+}
+
+.site-navbar .navbar-brand {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.22rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.site-navbar .navbar-brand:hover,
+.site-navbar .navbar-brand:focus-visible {
+  color: var(--rose);
+}
+
+.site-navbar .navbar-toggler {
+  border-color: rgba(28, 49, 88, 0.28);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.site-navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.16);
+}
+
+.site-navbar .nav-link {
+  color: #33433a;
+  font-size: 0.92rem;
+  font-weight: 800;
+  padding-inline: 0.7rem !important;
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link:focus-visible,
+.site-navbar .nav-link.active {
+  color: var(--saffron);
 }
 
 .hero {
