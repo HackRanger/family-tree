@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Joshi Kovadkar Family Tree Documentary</title>
+    <meta
+      name="description"
+      content="An interactive family tree and documentary history connecting Mulvir temple, Kowad, Karada Brahmin culture and the Mysore branch."
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Joshi [Panashikar] Kovadkar Family</p>
+          <h1>A Family Tree Documentary</h1>
+          <p class="lede">
+            From temple service in Pernem to Kowad, Belagavi, Bangalore, northern Karnataka and Mysore, this page gathers the scanned genealogy and oral history into one navigable archive.
+          </p>
+          <div class="hero-actions" aria-label="Page sections">
+            <a href="#tree">Explore tree</a>
+            <a href="#history">Read history</a>
+            <a href="#sources">Sources</a>
+          </div>
+        </div>
+        <figure class="scan-frame">
+          <img src="./assets/family-tree-scan-page-1.png" alt="Original handwritten family tree scan" />
+          <figcaption>Original scanned chart, interpreted and expanded with the Mysore branch.</figcaption>
+        </figure>
+      </section>
+
+      <section class="context-strip" aria-label="Key movements">
+        <span>Mulvir Temple, Pernem</span>
+        <span>Kowad ritual service</span>
+        <span>Belagavi and Bangalore</span>
+        <span>Northern Karnataka Dattatreya worship</span>
+        <span>Mysore branch</span>
+      </section>
+
+      <section class="tree-section" id="tree">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive tree</p>
+          <h2>Tap a name to read its place in the story</h2>
+        </div>
+        <div class="tree-tools">
+          <label>
+            <span>Search names, places or branches</span>
+            <input id="tree-search" placeholder="Try Sitaram, Mysore, Vasant, Dattatreya" />
+          </label>
+          <div class="zoom-panel" aria-label="Tree zoom controls">
+            <span>Tree zoom</span>
+            <div class="zoom-controls">
+              <button id="zoom-out" type="button" aria-label="Zoom out">-</button>
+              <input id="zoom-slider" aria-label="Tree zoom level" type="range" min="0.25" max="1.25" step="0.05" value="0.55" />
+              <button id="zoom-in" type="button" aria-label="Zoom in">+</button>
+            </div>
+            <div class="zoom-presets">
+              <button id="zoom-fit" type="button">Fit</button>
+              <button id="zoom-reset" type="button">Reset</button>
+              <strong id="zoom-label">55%</strong>
+            </div>
+          </div>
+          <div class="counter" id="tree-counter">0 names mapped</div>
+        </div>
+        <div class="tree-layout">
+          <div class="tree-scroll" id="tree-scroll" aria-label="Family tree graph"></div>
+          <aside class="person-panel">
+            <p class="eyebrow">Selected</p>
+            <h3 id="selected-name">Govind Bhat</h3>
+            <p class="subtitle" id="selected-subtitle"></p>
+            <p id="selected-note"></p>
+            <div class="path">
+              <span>Lineage path</span>
+              <p id="selected-path"></p>
+            </div>
+            <div class="tags" id="selected-tags"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="history" id="history">
+        <div class="section-heading">
+          <p class="eyebrow">Documentary history</p>
+          <h2>The movement of a priestly family</h2>
+        </div>
+        <div class="chapters">
+          <article>
+            <p class="eyebrow">Origin</p>
+            <h3>Mulvir, Pernem</h3>
+            <p>The remembered beginning of this lineage is priestly service at Mulvir temple in Pernem, Goa.</p>
+            <p>Pernem, also known as Pedne, sits at Goa's northern edge near Maharashtra, a region shaped by temple villages, border movement and old Konkani-Marathi cultural exchange.</p>
+          </article>
+          <article>
+            <p class="eyebrow">Patronage</p>
+            <h3>Kowad</h3>
+            <p>A later turning point came when ancestors of Marathi writer Ranjit Desai are remembered to have brought Hari Bhat or his descendants to Kowad for regular pooja at the Desai residence.</p>
+            <p>Kowad is in Chandgad taluka of Kolhapur district, close to Belagavi.</p>
+          </article>
+          <article>
+            <p class="eyebrow">Migration</p>
+            <h3>Three Directions</h3>
+            <p>After several generations in Kowad, the family story spreads into three broad geographies: Belagavi, Bangalore and northern Karnataka.</p>
+            <p>Bangalore relatives became associated with Karada Brahmin Sangha networks through Marathi language and community memory.</p>
+          </article>
+          <article>
+            <p class="eyebrow">Investigation</p>
+            <h3>Narsoba and Dattatreya</h3>
+            <p>Your Kowad investigation suggests a possible ritual confusion: a Narsoba temple in nearby Nittur may have been overlooked, while similarity of names led some ancestors to associate the lineage with Narsoba Wadi and Dattatreya worship.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="feature-band">
+        <div>
+          <p class="eyebrow">Your branch</p>
+          <h2>Sitaram &gt; Balakrishna &gt; Govind Rao &gt; Umashankar &gt; You</h2>
+          <p>
+            The scan stops before Govind Rao's generation, so this documentary restores the Mysore line from oral history. Govind Rao's sons are Seetaram, Umashankar, Nagaraja and Shashidhar. Seetaram's sons are Abhijith and Avinash, Nagaraja's son is Ritesh Joshi, and Shashidhar passed away in 2005 as a bachelor.
+          </p>
+        </div>
+        <div class="lineage-card" aria-label="Your direct lineage">
+          <span>Sitaram</span>
+          <span>Balakrishna</span>
+          <span>Govind Rao</span>
+          <span>Umashankar</span>
+          <span>You</span>
+        </div>
+      </section>
+
+      <section class="culture-grid">
+        <article>
+          <h2>Mulvir Region</h2>
+          <p>Pernem/Pedne is Goa's northern gateway, bordered by Maharashtra and connected by river, road and coastal movement. In family memory, this is the sacred starting landscape.</p>
+        </article>
+        <article>
+          <h2>Kowad Region</h2>
+          <p>Kowad sits in Chandgad taluka, Kolhapur district, near Belagavi. Its borderland position helps explain family movement toward Karnataka towns while keeping ties to Kowad temples and village memory.</p>
+        </article>
+        <article>
+          <h2>Karada Brahmin Culture</h2>
+          <p>Karhade/Karada Brahmins are associated with Marathi and Konkani-speaking regions of Maharashtra, Goa and Karnataka. For the Bangalore side, Marathi language appears to have helped preserve community identity after migration.</p>
+        </article>
+        <article>
+          <h2>Family Deity</h2>
+          <p>The remembered family deity is Kolhapur Mahalakshmi. This is kept distinct from the later Dattatreya/Narsoba thread, which may reflect a branch-specific devotional development.</p>
+        </article>
+      </section>
+
+      <section class="archive" aria-label="Original scans">
+        <div class="section-heading">
+          <p class="eyebrow">Archive</p>
+          <h2>The handwritten evidence</h2>
+        </div>
+        <div class="scan-grid">
+          <img src="./assets/family-tree-scan-page-1.png" alt="Family tree scan page one" />
+          <img src="./assets/family-tree-scan-page-2.png" alt="Family tree scan page two with starred continuations" />
+        </div>
+      </section>
+
+      <section class="sources" id="sources">
+        <div class="section-heading">
+          <p class="eyebrow">Source notes</p>
+          <h2>What this page is based on</h2>
+        </div>
+        <ul>
+          <li>Primary family evidence: the handwritten two-page family tree scan and oral history notes.</li>
+          <li><a href="https://northgoa.gov.in/culture-heritage/">North Goa District, Government of Goa</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Pernem_taluka">Pernem taluka reference</a></li>
+          <li><a href="https://www.census2011.co.in/data/village/568142-kowad-maharashtra.html">Census 2011 Kowad profile</a></li>
+          <li><a href="https://www.harpercollins.com/blogs/authors/ranjit-desai-0002176">HarperCollins biography of Ranjit Desai</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Karhade_Brahmin">Karhade Brahmin reference</a></li>
+        </ul>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
