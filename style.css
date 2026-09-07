@@ -110,6 +110,10 @@ main {
   max-width: 760px;
 }
 
+.hero .author-caption {
+  color: var(--ink) !important;
+}
+
 .eyebrow {
   margin: 0 0 0.8rem;
   color: var(--saffron);
