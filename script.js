@@ -160,7 +160,7 @@ const familyTree = {
                                   id: "shivaram-branch",
                                   name: "Shivaram Bhat",
                                   children: [
-                                    { id: "krishnaji", name: "Krishnaji", children: [{ id: "krishna-star1", name: "Krishna" }, { id: "madhukar-star1", name: "Madhukar" }, { id: "vasant", name: "Vasant", subtitle: "*1 continuation", children: [{ id: "ramachandra-vasant", name: "Ramachandra" }, { id: "dattatraya-vasant", name: "Dattatraya" }] }, { id: "jagannath", name: "Jagannath" }] },
+                                    { id: "krishnaji", name: "Krishnaji", children: [{ id: "krishna-star1", name: "Krishna" }, { id: "madhukar-star1", name: "Madhukar" }, { id: "vasant", name: "Vasant Joshi", subtitle: "*1 continuation", children: [{ id: "ramachandra-vasant", name: "Ramachandra" }, { id: "dutta-joshi", name: "Dutta Joshi", subtitle: "Son of Vasant Joshi", note: "Dutta Joshi recalled that his mother believed the family kuladevata could be Yoga Narasimha temple in Nittur, Maharashtra. He personally continued with Mulvir Shiva temple and Bhagavati temple in Mulvir as kuladevata practice.", tags: ["Kuladevata investigation", "Nittur", "Mulvir"] }] }, { id: "jagannath", name: "Jagannath" }] },
                                     {
                                       id: "vishnu",
                                       name: "Vishnu",
