@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Joshi Kovadkar Family Tree Documentary</title>
+    <title>Kovadkar Family Documentary</title>
     <meta
       name="description"
-      content="An interactive family tree and documentary history connecting Mulvir temple, Kowad, Karada Brahmin culture and the Mysore branch."
+      content="A documentary-style overview of the Kovadkar family tree, migration history, gotra, temple connections and source archive."
     />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="./style.css" />
@@ -14,30 +14,23 @@
   <body>
     <nav class="navbar navbar-expand-lg site-navbar sticky-top" aria-label="Main navigation">
       <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html" aria-label="Joshi Kovadkar family tree home">
+        <a class="navbar-brand" href="./index.html" aria-label="Kovadkar family documentary home">
           <img src="./assets/family-tree-icon.png" alt="" />
           <span>Kovadkar Family</span>
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNavbar"
-          aria-controls="mainNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#tree">Family Tree</a></li>
-            <li class="nav-item"><a class="nav-link" href="#history">History</a></li>
-            <li class="nav-item"><a class="nav-link" href="#gotra">Gotra</a></li>
-            <li class="nav-item"><a class="nav-link" href="#pernem-temples">Pernem Temples</a></li>
-            <li class="nav-item"><a class="nav-link" href="#nittur-narasimha">Nittur Temple</a></li>
-            <li class="nav-item"><a class="nav-link" href="#sources">Sources</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html">Documentary</a></li>
+            <li class="nav-item"><a class="nav-link" href="./family-tree.html">Family Tree</a></li>
+            <li class="nav-item"><a class="nav-link" href="./history.html">History</a></li>
+            <li class="nav-item"><a class="nav-link" href="./gotra.html">Gotra</a></li>
+            <li class="nav-item"><a class="nav-link" href="./pernem-temples.html">Pernem Temples</a></li>
+            <li class="nav-item"><a class="nav-link" href="./nittur-narasimha.html">Nittur Temple</a></li>
             <li class="nav-item"><a class="nav-link" href="./sources.html">Source Files</a></li>
+            <li class="nav-item"><a class="nav-link" href="./about.html">Author</a></li>
           </ul>
         </div>
       </div>
@@ -48,8 +41,15 @@
           <p class="eyebrow">Joshi [Panashikar] Kovadkar Family</p>
           <h1>A Family Tree Documentary</h1>
           <p class="lede">
-            From temple service in Pernem to Kowad, Belagavi, Bangalore, northern Karnataka and Mysore, this page gathers the scanned genealogy and oral history into one navigable archive.
+            This documentary gathers family memory, scanned genealogy, temple references and field investigation into one shared archive for the Kovadkar family.
           </p>
+          <p>
+            Its purpose is to preserve what is known, mark what is uncertain, and make future corrections easier. Each topic now has its own page so the family tree, history, gotra, temple notes and source files can be edited independently.
+          </p>
+          <div class="hero-actions">
+            <a href="./family-tree.html">Open family tree</a>
+            <a href="./history.html">Read history</a>
+          </div>
         </div>
         <figure class="scan-frame">
           <img src="./assets/family-tree-scan-page-1.png" alt="Original handwritten family tree scan" />
@@ -65,298 +65,51 @@
         <span>Mysore branch</span>
       </section>
 
-      <section class="tree-section" id="tree">
+      <section class="source-section">
         <div class="section-heading">
-          <p class="eyebrow">Interactive tree</p>
-          <h2>Tap a name to read its place in the story</h2>
+          <p class="eyebrow">Document sections</p>
+          <h2>Explore the archive</h2>
         </div>
-        <div class="tree-tools">
-          <label>
-            <span>Search names, places or branches</span>
-            <input id="tree-search" placeholder="Try Sitaram, Mysore, Vasant, Dattatreya" />
-          </label>
-          <div class="zoom-panel" aria-label="Tree zoom controls">
-            <span>Tree zoom</span>
-            <div class="zoom-controls">
-              <button id="zoom-out" type="button" aria-label="Zoom out">-</button>
-              <input id="zoom-slider" aria-label="Tree zoom level" type="range" min="0.25" max="1.25" step="0.05" value="0.55" />
-              <button id="zoom-in" type="button" aria-label="Zoom in">+</button>
-            </div>
-            <div class="zoom-presets">
-              <button id="zoom-fit" type="button">Fit</button>
-              <button id="zoom-reset" type="button">Reset</button>
-              <strong id="zoom-label">55%</strong>
-            </div>
-          </div>
-          <div class="counter" id="tree-counter">0 names mapped</div>
-        </div>
-        <div class="tree-layout">
-          <div class="tree-scroll" id="tree-scroll" aria-label="Family tree graph"></div>
-          <aside class="person-panel">
-            <p class="eyebrow">Selected</p>
-            <h3 id="selected-name">Govind Bhat</h3>
-            <p class="subtitle" id="selected-subtitle"></p>
-            <p id="selected-note"></p>
-            <div class="path">
-              <span>Lineage path</span>
-              <p id="selected-path"></p>
-            </div>
-            <div class="tags" id="selected-tags"></div>
-          </aside>
-        </div>
-      </section>
-
-      <section class="history" id="history">
-        <div class="section-heading">
-          <p class="eyebrow">Documentary history</p>
-          <h2>The movement of a priestly family</h2>
-        </div>
-        <div class="chapters">
+        <div class="source-grid">
           <article>
-            <p class="eyebrow">Origin</p>
-            <h3>Mulvir, Pernem</h3>
-            <p>The remembered beginning of this lineage is priestly service at Mulvir temple in Pernem, Goa.</p>
-            <p>Pernem, also known as Pedne, sits at Goa's northern edge near Maharashtra, a region shaped by temple villages, border movement and old Konkani-Marathi cultural exchange.</p>
+            <h3>Family Tree</h3>
+            <p>Interactive chart with zoom controls, lineage paths and notes for each branch.</p>
+            <a href="./family-tree.html">Open page</a>
           </article>
           <article>
-            <p class="eyebrow">Patronage</p>
-            <h3>Kowad</h3>
-            <p>A later turning point came when ancestors of Marathi writer Ranjit Desai are remembered to have brought Hari Bhat or his descendants to Kowad for regular pooja at the Desai residence.</p>
-            <p>Kowad is in Chandgad taluka of Kolhapur district, close to Belagavi.</p>
+            <h3>History</h3>
+            <p>The remembered movement from Pernem to Kowad, Bangalore, Belagavi, northern Karnataka and Mysore.</p>
+            <a href="./history.html">Open page</a>
           </article>
           <article>
-            <p class="eyebrow">Migration</p>
-            <h3>Three Directions</h3>
-            <p>After several generations in Kowad, the family story spreads into three broad geographies: Belagavi, Bangalore and northern Karnataka.</p>
-            <p>Bangalore relatives became associated with Karada Brahmin Sangha networks through Marathi language and community memory.</p>
+            <h3>Gotra</h3>
+            <p>The Bharadwaja gotra abhivadanam, Rigvedic tradition and Kannada translation.</p>
+            <a href="./gotra.html">Open page</a>
           </article>
           <article>
-            <p class="eyebrow">Bangalore</p>
-            <h3>Babu Bhat on Surveyor Street</h3>
-            <p>Babu Bhat, also remembered as Bapu Bhat, was a son of Purushottam Bhat. Family history identifies him as a government surveyor and resident of Surveyor Street in Bangalore.</p>
-            <p>A Bangalore Mirror local-history article gives the wider context of Surveyor Street as a place associated with surveyors who came to Bengaluru during city expansion.</p>
+            <h3>Pernem Temples</h3>
+            <p>Mulvir and Bhagavati temple images, map links and kuladevata context.</p>
+            <a href="./pernem-temples.html">Open page</a>
           </article>
           <article>
-            <p class="eyebrow">Investigation</p>
-            <h3>Narsoba and Dattatreya</h3>
-            <p>Your Kowad investigation suggests a possible ritual confusion: a Narsoba temple in nearby Nittur may have been overlooked, while similarity of names led some ancestors to associate the lineage with Narsoba Wadi and Dattatreya worship.</p>
-            <p>Dutta Joshi, son of Vasant Joshi from the *1 branch, recalled a family memory that the kuladevata may instead be connected with Yoga Narasimha temple at Nittur, Maharashtra.</p>
+            <h3>Nittur Temple</h3>
+            <p>Nittur Narasimha temple images, contact details and the kuladevata investigation.</p>
+            <a href="./nittur-narasimha.html">Open page</a>
+          </article>
+          <article>
+            <h3>Source Files</h3>
+            <p>Scans, notes, archived pages, image material and external references.</p>
+            <a href="./sources.html">Open page</a>
+          </article>
+          <article>
+            <h3>Author</h3>
+            <p>About Subramanya Joshi, author and compiler of this documentary.</p>
+            <a href="./about.html">Open page</a>
           </article>
         </div>
-      </section>
-
-      <section class="feature-band">
-        <div>
-          <p class="eyebrow">Your branch</p>
-          <h2>Sitaram &gt; Balakrishna &gt; Govind Rao &gt; Umashankar &gt; Subramanya</h2>
-          <p>
-            The scan stops before Govind Rao's generation, so this documentary restores the Mysore line from oral history. Govind Rao's sons are Seetaram, Umashankar, Nagaraja and Shashidhar. Seetaram's sons are Abhijith and Avinash, Nagaraja's son is Ritesh Joshi, and Shashidhar passed away in 2005 as a bachelor. Umashankar passed away in July 2006, and his son Subramanya is the author and compiler of this documentary.
-          </p>
-          <p class="author-caption">Documentary authored and compiled by Subramanya, son of Umashankar.</p>
-        </div>
-        <div class="lineage-card" aria-label="Your direct lineage">
-          <span>Sitaram</span>
-          <span>Balakrishna</span>
-          <span>Govind Rao</span>
-          <span>Umashankar</span>
-          <span>Subramanya</span>
-        </div>
-      </section>
-
-      <section class="culture-grid">
-        <article>
-          <h2>About the Panashikar Name</h2>
-          <p>The handwritten family tree uses the label Joshi [Panashikar] Kovadkar, but family evidence does not suggest a connection to the Panashikar sweet-maker or sweet-seller tradition, similar to the Halwai occupation.</p>
-          <p>In the remembered history of this line, the known occupations are temple priests, surveyors and similar government roles. No known ancestor from this branch is remembered as being in the sweet-making or sweet-selling business.</p>
-        </article>
-        <article>
-          <h2>Mulvir Region</h2>
-          <p>Pernem/Pedne is Goa's northern gateway, bordered by Maharashtra and connected by river, road and coastal movement. In family memory, this is the sacred starting landscape.</p>
-        </article>
-        <article>
-          <h2>Kowad Region</h2>
-          <p>Kowad sits in Chandgad taluka, Kolhapur district, near Belagavi. Its borderland position helps explain family movement toward Karnataka towns while keeping ties to Kowad temples and village memory.</p>
-        </article>
-        <article>
-          <h2>Karada Brahmin Culture</h2>
-          <p>Karhade/Karada Brahmins are associated with Marathi and Konkani-speaking regions of Maharashtra, Goa and Karnataka. For the Bangalore side, Marathi language appears to have helped preserve community identity after migration.</p>
-        </article>
-        <article>
-          <h2>Family Deity</h2>
-          <p>Recent family belief holds Kolhapur Mahalakshmi and Dattatreya as kuladevata, but this remains contested in the family memory. One concern is that Dattatreya may not fit the older kuladevata pattern remembered by some family members, where Shiva-Parvati or Vishnu-Lakshmi forms are more commonly expected.</p>
-          <p>Mahalakshmi could represent the female deity, but the missing male deity has created confusion. In your investigation, Dutta Joshi, son of Vasant Joshi from the *1 branch, concluded that his own kuladevata practice has shifted to Mulvir Shiva temple and Bhagavati temple in Mulvir. He also recalled his mother's belief that the family kuladevata could be connected to Yoga Narasimha temple in Nittur, Maharashtra.</p>
-          <p><a href="https://maps.app.goo.gl/c6DedDrFawoKdLgdA">Yoga Narasimha / Narsoba temple, Nittur map reference</a></p>
-        </article>
-      </section>
-
-      <section class="gotra-section" id="gotra">
-        <div class="section-heading">
-          <p class="eyebrow">Gotra and Vedic lineage</p>
-          <h2>Bharadwaja Gotra, Rigvedic Tradition</h2>
-        </div>
-        <div class="gotra-layout">
-          <div class="shloka-card">
-            <p lang="sa">आङ्गिरस-बार्हस्पत्य-भारद्वाज-त्रिप्रवरान्वितः ऋग्वेदान्तर्गत-आश्वलायनसूत्र-शाकलशाखाध्यायी भारद्वाजगोत्रः</p>
-            <p lang="sa">गोत्रोत्पन्नोऽहं सुब्रह्मण्यशर्मा अभिवादये ॥</p>
-          </div>
-          <div class="gotra-copy">
-            <p>
-              This is an abhivadanam-style lineage statement. It identifies the person as belonging to Bharadwaja gotra, with the three pravaras Angirasa, Barhaspatya and Bharadwaja. It also states a Rigvedic affiliation through the Ashwalayana sutra and Shakala shakha.
-            </p>
-            <p>
-              In family interpretation, this supports the conclusion that the lineage followed a Rigvedic tradition. That is meaningful because Rigvedic practice is remembered as common in the Mulvir-Goa region and also creates a shared denominator with Karhade/Karada Brahmin identity.
-            </p>
-            <div class="translation-card">
-              <h3>Kannada Translation</h3>
-              <p lang="kn">
-                ಆಂಗಿರಸ, ಬಾರ್ಹಸ್ಪತ್ಯ ಮತ್ತು ಭಾರದ್ವಾಜ ಎಂಬ ಮೂರು ಪ್ರವರಗಳಿಂದ ಯುಕ್ತನಾಗಿ, ಋಗ್ವೇದಕ್ಕೆ ಸೇರಿದ ಆಶ್ವಲಾಯನ ಸೂತ್ರ ಮತ್ತು ಶಾಕಲ ಶಾಖೆಯನ್ನು ಅಧ್ಯಯನ ಮಾಡುವ ಭಾರದ್ವಾಜ ಗೋತ್ರದಲ್ಲಿ ಜನಿಸಿದ ನಾನು, ಸುಬ್ರಹ್ಮಣ್ಯ ಶರ್ಮ, ಅಭಿವಾದನೆ ಮಾಡುತ್ತೇನೆ.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="temple-section" id="pernem-temples">
-        <div class="section-heading">
-          <p class="eyebrow">Pernem temple landscape</p>
-          <h2>Mulvir and Bhagavati Temples</h2>
-        </div>
-        <div class="temple-layout">
-          <div class="temple-copy">
-            <p>
-              The family's oldest remembered sacred geography is in Pernem, Goa. Hari Bhat and his ancestors are remembered as priests connected with Mulvir temple, and Dutta Joshi from the *1 branch continues to treat Mulvir Shiva temple and Bhagavati temple in Mulvir as the kuladevata practice.
-            </p>
-            <p>
-              These two temples help explain why the family story should not be reduced only to the later Dattatreya or Kolhapur Mahalakshmi belief. Mulvir and Bhagavati preserve the Pernem-side memory of worship, priestly duty and village deity tradition.
-            </p>
-            <div class="map-links" aria-label="Pernem temple map links">
-              <a href="https://maps.app.goo.gl/oLPVkeEhMJocr5fm9">Mulvir Temple, Pernem</a>
-              <a href="https://maps.app.goo.gl/2Qsyr6M5YWWX5Vqf6">Bhagavati Temple, Pernem</a>
-            </div>
-          </div>
-          <div class="temple-gallery" aria-label="Mulvir and Bhagavati Temple images">
-            <figure>
-              <img src="./assets/pernem-mulvir-deity.png" alt="Mulvir Temple deity in Pernem" />
-              <figcaption>Mulvir Temple worship image, Pernem.</figcaption>
-            </figure>
-            <figure>
-              <img src="./assets/pernem-temple-gateway.png" alt="Temple gateway in Pernem" />
-              <figcaption>Temple gateway in the Pernem temple landscape.</figcaption>
-            </figure>
-            <figure class="wide">
-              <img src="./assets/pernem-bhagavati-temple-exterior.png" alt="Bhagavati Temple exterior in Pernem" />
-              <figcaption>Bhagavati Temple exterior, surrounded by greenery.</figcaption>
-            </figure>
-            <figure class="wide">
-              <img src="./assets/pernem-bhagavati-temple-building.png" alt="Bhagavati Temple building in Pernem" />
-              <figcaption>Bhagavati Temple complex, Pernem.</figcaption>
-            </figure>
-            <figure>
-              <img src="./assets/pernem-bhagavati-deity.png" alt="Bhagavati deity in Pernem temple" />
-              <figcaption>Bhagavati deity worship image.</figcaption>
-            </figure>
-            <figure>
-              <img src="./assets/pernem-bhagavati-sanctum.png" alt="Bhagavati Temple sanctum view" />
-              <figcaption>Sanctum view at Bhagavati Temple.</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section class="temple-section" id="nittur-narasimha">
-        <div class="section-heading">
-          <p class="eyebrow">Kuladevata investigation</p>
-          <h2>Nittur Narasimha Temple</h2>
-        </div>
-        <div class="temple-layout">
-          <div class="temple-copy">
-            <p>
-              Nittur Narasimha Temple, also referred to in family discussion as Yoga Narasimha or Narsoba temple, is important because it may explain one branch of the family's kuladevata confusion. Dutta Joshi, son of Vasant Joshi from the *1 branch, recalled that his mother believed the family deity could be connected with this temple in Nittur, Maharashtra.
-            </p>
-            <p>
-              This does not settle the question for the whole family. It records a living investigation: current belief includes Kolhapur Mahalakshmi and Dattatreya, Dutta Joshi continues to follow Mulvir Shiva temple and Bhagavati temple in Mulvir, and Nittur Narasimha remains a meaningful candidate remembered through his mother's account.
-            </p>
-            <p>
-              The renovation board in the images identifies the issuing group as Shri Narsinha Devalaya Jirnoddhar Mandal and Villagers, Nittur, meaning the Shri Narsinha Temple Renovation Committee and villagers of Nittur.
-            </p>
-            <div class="contact-panel">
-              <h3>Contact List</h3>
-              <dl>
-                <div><dt>K. N. Patil</dt><dd><a href="tel:+918668525363">8668525363</a></dd></div>
-                <div><dt>G. K. Patil (Guruji)</dt><dd><a href="tel:+917249891468">7249891468</a></dd></div>
-                <div><dt>Narsing Gopal Patil</dt><dd><a href="tel:+918806961777">8806961777</a></dd></div>
-                <div><dt>Yuvraj D. Patil (Guruji)</dt><dd><a href="tel:+917741005668">7741005668</a></dd></div>
-                <div><dt>Bhagoji N. Patil (Appa Kalas)</dt><dd><a href="tel:+91992221068">9922211068</a></dd></div>
-              </dl>
-            </div>
-          </div>
-          <div class="temple-gallery" aria-label="Nittur Narasimha Temple images">
-            <figure>
-              <img src="./assets/nittur-narasimha-temple-exterior.png" alt="Nittur Narasimha Temple exterior" />
-              <figcaption>Temple exterior from Google Maps reference material.</figcaption>
-            </figure>
-            <figure>
-              <img src="./assets/nittur-narasimha-temple-entrance.png" alt="Nittur Narasimha Temple entrance" />
-              <figcaption>Entrance and temple precinct.</figcaption>
-            </figure>
-            <figure>
-              <img src="./assets/nittur-narasimha-deity-offering.png" alt="Narasimha deity with offerings" />
-              <figcaption>Narasimha deity with offerings.</figcaption>
-            </figure>
-            <figure>
-              <img src="./assets/nittur-narasimha-deity-close.png" alt="Close view of Narasimha deity" />
-              <figcaption>Close view of the deity.</figcaption>
-            </figure>
-            <figure class="wide">
-              <img src="./assets/nittur-narasimha-renovation-board.png" alt="Nittur Narasimha Temple renovation board with contact list" />
-              <figcaption>Renovation board and contact details from Shri Narsinha Devalaya Jirnoddhar Mandal and villagers, Nittur.</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section class="archive" aria-label="Original scans">
-        <div class="section-heading">
-          <p class="eyebrow">Archive</p>
-          <h2>The handwritten evidence</h2>
-        </div>
-        <div class="scan-grid">
-          <img src="./assets/family-tree-scan-page-1.png" alt="Family tree scan page one" />
-          <img src="./assets/family-tree-scan-page-2.png" alt="Family tree scan page two with starred continuations" />
-        </div>
-      </section>
-
-      <section class="sources" id="sources">
-        <div class="section-heading">
-          <p class="eyebrow">Source notes</p>
-          <h2>What this page is based on</h2>
-        </div>
-        <ul>
-          <li>Primary family evidence: the handwritten two-page family tree scan and oral history notes.</li>
-          <li>Gotra note: the Sanskrit abhivadanam identifies Bharadwaja gotra, Angirasa-Barhaspatya-Bharadwaja pravara, Rigveda, Ashwalayana sutra and Shakala shakha.</li>
-          <li>Family identity note: the Panashikar label appears in the handwritten tree, but this branch is remembered through priestly, surveyor and government-service occupations, not sweet-making or sweet-selling work.</li>
-          <li><a href="https://northgoa.gov.in/culture-heritage/">North Goa District, Government of Goa</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Pernem_taluka">Pernem taluka reference</a></li>
-          <li><a href="https://www.census2011.co.in/data/village/568142-kowad-maharashtra.html">Census 2011 Kowad profile</a></li>
-          <li><a href="https://www.harpercollins.com/blogs/authors/ranjit-desai-0002176">HarperCollins biography of Ranjit Desai</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Karhade_Brahmin">Karhade Brahmin reference</a></li>
-          <li><a href="https://maps.app.goo.gl/c6DedDrFawoKdLgdA">Google Maps: Yoga Narasimha / Narsoba temple, Nittur, Maharashtra</a></li>
-          <li><a href="https://maps.app.goo.gl/oLPVkeEhMJocr5fm9">Google Maps: Mulvir Temple, Pernem, Goa</a></li>
-          <li><a href="https://maps.app.goo.gl/2Qsyr6M5YWWX5Vqf6">Google Maps: Bhagavati Temple, Pernem, Goa</a></li>
-          <li><a href="https://www.onefivenine.com/india/villages/Kolhapur/Chandgad/Nittur">Nittur village reference listing Narsoba Temple</a></li>
-          <li>Nittur Narasimha Temple images and contact details are family-provided screenshots from Google Maps and temple renovation material.</li>
-          <li>Mulvir and Bhagavati Temple images are family-provided screenshots from Google Maps and related temple reference material.</li>
-          <li><a href="https://bangaloremirror.indiatimes.com/opinion/others/resident-rendezvoyeur-on-another-scale/articleshow/49972795.cms">Bangalore Mirror: Resident Rendezvoyeur: On another scale</a>, used for Surveyor Street context.</li>
-          <li><a href="./sources/bangalore-mirror-surveyor-street.html">Archived downloaded copy of the Bangalore Mirror source page</a></li>
-        </ul>
       </section>
     </main>
-    <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script
-      data-goatcounter="https://subbujoshi.goatcounter.com/count"
-      async
-      src="https://gc.zgo.at/count.js"
-    ></script>
+    <script data-goatcounter="https://subbujoshi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
   </body>
 </html>
