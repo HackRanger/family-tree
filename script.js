@@ -112,9 +112,10 @@ const familyTree = {
                                                     {
                                                       id: "umashankar",
                                                       name: "Umashankar",
-                                                      subtitle: "Second son; your father",
+                                                      subtitle: "Second son; father of Subramanya",
+                                                      note: "Umashankar, son of Govind Rao, passed away in July 2006. His son Subramanya is the author of this documentary.",
                                                       tags: ["Your branch", "Mysore"],
-                                                      children: [{ id: "you", name: "You", subtitle: "Mysore-born descendant", tags: ["Living archive"] }],
+                                                      children: [{ id: "subramanya", name: "Subramanya", subtitle: "Son of Umashankar; author", note: "Subramanya is the author and compiler of this family tree documentary.", tags: ["Living archive", "Author"] }],
                                                     },
                                                     {
                                                       id: "nagaraja-govind-rao",

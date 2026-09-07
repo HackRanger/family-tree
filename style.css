@@ -483,6 +483,12 @@ figcaption {
   color: rgba(255, 250, 241, 0.82);
 }
 
+.author-caption {
+  margin-top: 1rem;
+  color: #fffaf1 !important;
+  font-weight: 900;
+}
+
 .lineage-card {
   display: grid;
   gap: 0.6rem;
