@@ -47,7 +47,10 @@ const familyTree = {
                                   children: [
                                     {
                                       id: "bapu-bhat",
-                                      name: "Bapu Bhat",
+                                      name: "Babu / Bapu Bhat",
+                                      subtitle: "Son of Purushottam Bhat; government surveyor",
+                                      note: "Family history remembers Babu Bhat, also written as Bapu Bhat, as a son of Purushottam Bhat who worked as a government surveyor and lived on Surveyor Street in Bangalore. Bangalore Mirror's local-history article on Surveyor Street records the broader setting: surveyors connected with Bengaluru's expansion and the street that took its name from them.",
+                                      tags: ["Bangalore", "Surveyor Street", "Government surveyor", "Oral history"],
                                       children: [
                                         {
                                           id: "anant-bhat",
