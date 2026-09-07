@@ -571,6 +571,25 @@ figcaption {
   font-weight: 900;
 }
 
+.map-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.4rem;
+}
+
+.map-links a {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(28, 49, 88, 0.24);
+  background: var(--ink);
+  color: #fffaf1;
+  font-weight: 900;
+  padding: 0.7rem 0.85rem;
+  text-decoration: none;
+}
+
 .temple-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
